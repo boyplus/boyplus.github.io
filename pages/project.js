@@ -1,14 +1,14 @@
 import { Fragment } from "react";
 import Layout from "../components/Layout";
 
-const About = () => {
+const Project = () => {
   return (
     <Fragment>
-      <Layout page="about">
-        <h1>About</h1>
+      <Layout page="project">
+        <h1>Project</h1>
       </Layout>
     </Fragment>
   );
 };
 
-export default About;
+export default Project;

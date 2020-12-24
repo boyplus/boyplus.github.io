@@ -1,19 +1,38 @@
 import { Fragment } from "react";
-import Head from "next/head";
-import Link from 'next/link'
+import Layout from "../components/Layout";
+
 const Home = () => {
   return (
     <Fragment>
-      <Head>
-        <title>Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div>
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/contact">Contact</Link>
-        <h1>Thanaphon Sombunakaeo</h1>
-      </div>
+      <Layout page="home">
+        <div className="container">
+          <img
+            src="/images/profile_pic.jpeg"
+            width="200px"
+            className="profilePic"
+          ></img>
+          <h1 style={{ padding: "5px" }}>Thanaphon Sombunkaeo</h1>
+          <div style={{ textAlign: "center" }}>
+            <p style={{ padding: "5px" }}>
+              Computer Science student who interest in algorithms and web
+              development.
+            </p>
+          </div>
+        </div>
+      </Layout>
+      <style jsx>{`
+        .container {
+          min-height: 80vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        .profilePic {
+          border-radius: 50%;
+          margin: 5px;
+        }
+      `}</style>
     </Fragment>
   );
 };
