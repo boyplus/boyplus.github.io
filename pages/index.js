@@ -1,7 +1,34 @@
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Layout from "../components/Layout";
 
 const Home = () => {
+  let bio =
+    "Computer Science student who interest in algorithms and web development.";
+  const [text, setText] = useState("");
+  let i = 0,
+    speed = 40;
+  const typeWriter = () => {
+    if (i < bio.length) {
+      setText(bio.slice(0, i + 1));
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  };
+  const getCursorStyle = () => {
+    if (text.length !== bio.length) {
+      return {
+        marginLeft: "-5px",
+        width: "5px",
+        height: "15px",
+        backgroundColor: "grey",
+      };
+    } else {
+      return {};
+    }
+  };
+  useEffect(() => {
+    typeWriter();
+  }, []);
   return (
     <Fragment>
       <Layout page="home">
@@ -9,14 +36,16 @@ const Home = () => {
           <img
             src="/images/profile_pic.jpeg"
             width="200px"
+            height="auto"
             className="profilePic"
+            alt="profile picture"
           ></img>
-          <h1 style={{ padding: "5px" }}>Thanaphon Sombunkaeo</h1>
-          <div style={{ textAlign: "center" }}>
-            <p style={{ padding: "5px" }}>
-              Computer Science student who interest in algorithms and web
-              development.
-            </p>
+          <h1 style={{ padding: "5px", textAlign: "center" }}>
+            Thanaphon Sombunkaeo
+          </h1>
+          <div className="typing">
+            <p style={{ padding: "5px" }}>{text}</p>
+            <div style={getCursorStyle()}></div>
           </div>
         </div>
       </Layout>
@@ -31,6 +60,12 @@ const Home = () => {
         .profilePic {
           border-radius: 50%;
           margin: 5px;
+        }
+        .typing {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       `}</style>
     </Fragment>

@@ -6,7 +6,7 @@ import Footer from "./Footer";
 const Layout = (props) => {
   return (
     <Fragment>
-      <div>
+      <div lang="en">
         <Header></Header>
         <div className="contentContainer">
           <Nav page={props.page}></Nav>

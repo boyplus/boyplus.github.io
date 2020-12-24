@@ -16,3 +16,10 @@ a {
   margin: 0;
   padding: 0;
 }
+p {
+  font-size: 18px;
+}
+
+.blue {
+  color: #322f7b;
+}

@@ -19,6 +19,7 @@ const Footer = () => {
           font-weight: 400;
           font-size: 18px;
           letter-spacing: 2px;
+          text-align: center;
         }
       `}</style>
     </Fragment>
