@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Head from "next/head";
-import Link from 'next/link'
-const Home = () => {
+import Link from "next/link";
+const Contact = () => {
   return (
     <Fragment>
       <Head>
@@ -12,10 +12,10 @@ const Home = () => {
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
         <Link href="/contact">Contact</Link>
-        <h1>Thanaphon Sombunakaeo</h1>
+        <h1>Contact</h1>
       </div>
     </Fragment>
   );
 };
 
-export default Home;
+export default Contact;
