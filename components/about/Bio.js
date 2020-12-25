@@ -40,6 +40,7 @@ const Bio = () => {
           width: 100%;
           justify-content: center;
           padding-top: 40px;
+          margin-bottom: 40px;
         }
         .line {
           width: 7px;

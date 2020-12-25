@@ -7,6 +7,7 @@ const Education = () => {
         <div className="schoolContainer">
           <div className="card">
             <h2>King Mongkut's University of Technology Thonburi</h2>
+            <p className="year">2019 - Now</p>
             <p style={{ marginTop: "10px" }}>
               I'm currently studying bachelor's second year of Computer Science
               at School of Information Technology.
@@ -14,7 +15,8 @@ const Education = () => {
             <p style={{ marginTop: "10px" }}>Current GPAX : 3.78</p>
           </div>
           <div className="card">
-            <h2>Benjamarachutit Ratchaburi</h2>
+            <h2>Benjamarachutit Ratchaburi School</h2>
+            <p className="year">2012 - 2018</p>
             <p style={{ marginTop: "10px" }}>
               Science-Mathmematics Program (Mathmematics gifted program)
             </p>
@@ -31,10 +33,13 @@ const Education = () => {
         .card {
           width: 50%;
           padding: 20px 20px 0 0;
-          background: #ffffff;
         }
-        .box{
+        .box {
           margin-bottom: 50px;
+        }
+        .year {
+          opacity: 0.7;
+          margin-top: 3px;
         }
         @media only screen and (max-width: 900px) {
           .card {

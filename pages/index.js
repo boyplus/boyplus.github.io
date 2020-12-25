@@ -1,34 +1,8 @@
-import { Fragment, useState, useEffect } from "react";
+import { Fragment } from "react";
 import Layout from "../components/Layout";
+import Typing from "../components/Typing";
 
 const Home = () => {
-  let bio =
-    "Computer Science student who interest in algorithms and web development.";
-  const [text, setText] = useState("");
-  let i = 0,
-    speed = 40;
-  const typeWriter = () => {
-    if (i < bio.length) {
-      setText(bio.slice(0, i + 1));
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-  };
-  const getCursorStyle = () => {
-    if (text.length !== bio.length) {
-      return {
-        marginLeft: "-5px",
-        width: "5px",
-        height: "15px",
-        backgroundColor: "grey",
-      };
-    } else {
-      return {};
-    }
-  };
-  useEffect(() => {
-    typeWriter();
-  }, []);
   return (
     <Fragment>
       <Layout page="home">
@@ -44,8 +18,10 @@ const Home = () => {
             Thanaphon Sombunkaeo
           </h1>
           <div className="typing">
-            <p style={{ padding: "5px" }}>{text}</p>
-            <div style={getCursorStyle()}></div>
+            <Typing
+              bio="Computer Science student who interest in algorithms and web development."
+              speed={40}
+            ></Typing>
           </div>
         </div>
       </Layout>
