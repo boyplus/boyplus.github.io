@@ -16,7 +16,21 @@ const About = () => {
           <Awards></Awards>
         </div>
       </Layout>
-      <style jsx>{``}</style>
+      <style jsx>{`
+        .container {
+          margin: 0 50px;
+        }
+        @media only screen and (max-width: 1100px) {
+          .container {
+            margin-left: 0;
+          }
+        }
+        @media only screen and (max-width: 900px) {
+          .container {
+            margin: 10px 0 0 0;
+          }
+        }
+      `}</style>
     </Fragment>
   );
 };

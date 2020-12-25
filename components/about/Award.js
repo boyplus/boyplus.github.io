@@ -44,10 +44,11 @@ const Award = ({ image, text, year, desc }) => {
 
         @media only screen and (max-width: 500px) {
           .container{
-            padding: 0 0 40px 0;
+            padding: 0;
           }
           .card {
             margin: 0;
+            margin-top: 40px;
           }
           .card{
             width: 250px;
