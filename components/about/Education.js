@@ -12,7 +12,7 @@ const Education = () => {
               I'm currently studying bachelor's second year of Computer Science
               at School of Information Technology.
             </p>
-            <p style={{ marginTop: "10px" }}>Current GPAX : 3.78</p>
+            <p style={{ marginTop: "10px" }}>Current GPAX : 3.85</p>
           </div>
           <div className="card">
             <h2>Benjamarachutit Ratchaburi School</h2>

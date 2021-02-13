@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Layout from "../components/Layout";
 import Bio from "../components/about/Bio";
 import Education from "../components/about/Education";
+import Experiences from "../components/about/Experiences";
 import Skills from "../components/about/Skills";
 import Awards from "../components/about/Awards";
 
@@ -12,6 +13,7 @@ const About = () => {
         <Bio></Bio>
         <div className="container">
           <Education></Education>
+          <Experiences></Experiences>
           <Skills></Skills>
           <Awards></Awards>
         </div>
