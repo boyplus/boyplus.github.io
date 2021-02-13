@@ -3,22 +3,22 @@ import Award from "./Award";
 const Awards = () => {
   const items = [
     {
-      image: "/images/toi14.jpeg",
+      emoji: "🥇",
+      text: "Programming Competition Thailand National",
+      year: "2019",
+      desc: "Gold medal (1st place)",
+    },
+    {
+      emoji: "🥉",
       text: "Thailand Olympaid in Informatics (TOI 14th)",
       year: "2019",
       desc: "Bronze medal (28th place)",
     },
     {
-      image: "/images/toi13.JPG",
+      emoji: "🥉",
       text: "Thailand Olympaid in Informatics (TOI 13th)",
       year: "2018",
       desc: "Bronze medal (42th place)",
-    },
-    {
-      image: "/images/medal_all.jpg",
-      text: "Programming Competition Thailand National",
-      year: "2019",
-      desc: "Gold medal (1st place)",
     },
   ];
   return (
@@ -30,7 +30,7 @@ const Awards = () => {
             {items.map((item) => {
               return (
                 <Award
-                  image={item.image}
+                  emoji={item.emoji}
                   text={item.text}
                   year={item.year}
                   desc={item.desc}
@@ -46,13 +46,7 @@ const Awards = () => {
           padding-bottom: 50px;
         }
         .content {
-          display: grid;
-          grid-template-columns: auto auto auto;
-        }
-        .contentContainer {
           display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
         }
 
         @media only screen and (max-width: 1100px) {
