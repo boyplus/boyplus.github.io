@@ -5,19 +5,19 @@ const Experiences = () => {
   const experiences = [
     {
       title: "Computer Olympiad student",
-      year: "2017 - 2019",
+      year: "2015 - 2018",
       description:
         "Informatics olympiad student at Silpakorn University in camp 1, 2, and 3 (National Competition).",
     },
     {
       title: "CS Mentor",
-      year: "2020 - now",
+      year: "2020 - Present",
       description:
         "Mentor in Introductio to Programming and Web Application Development for first year student at SIT KMUTT.",
     },
     {
       title: "Content Creator of DSC KMUTT",
-      year: "2020 - now",
+      year: "2020 - Present",
       description:
         "Create content about Google services and Sustainable Development Goals at Developer Student Clubs - KMUTT.",
     },

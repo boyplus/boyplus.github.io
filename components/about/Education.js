@@ -7,7 +7,7 @@ const Education = () => {
         <div className="schoolContainer">
           <div className="card">
             <h2>King Mongkut's University of Technology Thonburi</h2>
-            <p className="year">2019 - Now</p>
+            <p className="year">2019 - Present</p>
             <p style={{ marginTop: "10px" }}>
               I'm currently studying bachelor's second year of Computer Science
               at School of Information Technology.
