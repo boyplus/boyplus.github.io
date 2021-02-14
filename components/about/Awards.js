@@ -45,7 +45,6 @@ const Awards = () => {
         }
         .content {
           display: grid;
-          margin-top: 20px;
           grid-template-columns: auto auto auto;
         }
         @media only screen and (max-width: 950px) {

@@ -37,7 +37,7 @@ const Award = ({ emoji, text, year, desc }) => {
         }
         .container{
           margin-top: 30px;
-          padding-right: 5%;
+          padding-right: 8%;
         }
 
         @media only screen and (max-width: 500px) {

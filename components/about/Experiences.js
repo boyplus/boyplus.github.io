@@ -53,7 +53,7 @@ const Experiences = () => {
         }
         .content {
           display: grid;
-          margin-top: 20px;
+          margin: 20px 0;
           grid-template-columns: auto auto auto;
         }
         @media only screen and (max-width: 950px) {
@@ -64,6 +64,9 @@ const Experiences = () => {
         @media only screen and (max-width: 500px) {
           .content {
             grid-template-columns: auto;
+          }
+          .item {
+            padding-right: 0;
           }
         }
       `}</style>
