@@ -29,6 +29,7 @@ const Award = ({ emoji, text, year, desc }) => {
           margin-bottom: 20px;
           display: flex;
           width: fit-content;
+          width: 100%;
         }
         .card:hover {
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -45,14 +46,7 @@ const Award = ({ emoji, text, year, desc }) => {
           }
           .card {
             margin: 0;
-            margin-top: 40px;
-          }
-          .card{
-            width: 250px;
-          }
-          .awardPic{
-            width: 250px;
-            height: 170px;
+            
           }
       `}</style>
     </Fragment>

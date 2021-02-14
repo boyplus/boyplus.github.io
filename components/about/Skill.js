@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+
 const Skill = ({ text }) => {
   return (
     <Fragment>
@@ -23,6 +24,11 @@ const Skill = ({ text }) => {
         @media only screen and (max-width: 800px) {
           .card {
             margin: 5px;
+          }
+        }
+        @media only screen and (max-width: 350px) {
+          .card {
+            width: 120px;
           }
         }
       `}</style>

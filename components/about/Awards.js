@@ -25,20 +25,18 @@ const Awards = () => {
     <Fragment>
       <div className="container">
         <h1 className="blue">Awards</h1>
-        <div className="contentContainer">
-          <div className="content">
-            {items.map((item) => {
-              return (
-                <Award
-                  emoji={item.emoji}
-                  text={item.text}
-                  year={item.year}
-                  desc={item.desc}
-                  key={item.text}
-                ></Award>
-              );
-            })}
-          </div>
+        <div className="content">
+          {items.map((item) => {
+            return (
+              <Award
+                emoji={item.emoji}
+                text={item.text}
+                year={item.year}
+                desc={item.desc}
+                key={item.text}
+              ></Award>
+            );
+          })}
         </div>
       </div>
       <style jsx>{`
@@ -46,21 +44,19 @@ const Awards = () => {
           padding-bottom: 50px;
         }
         .content {
-          display: flex;
+          display: grid;
+          margin-top: 20px;
+          grid-template-columns: auto auto auto;
         }
-
-        @media only screen and (max-width: 1100px) {
+        @media only screen and (max-width: 950px) {
           .content {
             grid-template-columns: auto auto;
           }
         }
-        @media only screen and (max-width: 720px) {
+        @media only screen and (max-width: 500px) {
           .content {
             grid-template-columns: auto;
-          }
-          .container {
             width: 100%;
-            /* background-color: blue; */
           }
         }
       `}</style>

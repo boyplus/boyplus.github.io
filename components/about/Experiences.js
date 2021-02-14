@@ -32,10 +32,10 @@ const Experiences = () => {
   return (
     <Fragment>
       <h1 className="blue">Experiences</h1>
-      <div className="container">
+      <div className="content">
         {experiences.map(({ title, year, description }) => {
           return (
-            <div className="item">
+            <div className="item" key={title}>
               <Experience
                 title={title}
                 year={year}
@@ -46,16 +46,25 @@ const Experiences = () => {
         })}
       </div>
       <style jsx>{`
-        .container {
-          display: flex;
-          flex-wrap: wrap;
-          margin-top: 20px;
-          margin-bottom: 40px;
-        }
         .item {
-          width: 33.33%;
-          padding-right: 5%;
+          width: 100%;
+          padding-right: 8%;
           margin-bottom: 10px;
+        }
+        .content {
+          display: grid;
+          margin-top: 20px;
+          grid-template-columns: auto auto auto;
+        }
+        @media only screen and (max-width: 950px) {
+          .content {
+            grid-template-columns: auto auto;
+          }
+        }
+        @media only screen and (max-width: 500px) {
+          .content {
+            grid-template-columns: auto;
+          }
         }
       `}</style>
     </Fragment>
