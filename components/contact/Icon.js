@@ -38,10 +38,10 @@ const Icon = ({ icon }) => {
           height: 10px;
           width: 200px;
         }
-        @media only screen and (max-width: 720px) {
+        @media only screen and (max-width: 600px) {
           .icon {
-            height: 25px;
-            width: 25px;
+            height: 30px;
+            width: 30px;
             margin: 0;
           }
         }
