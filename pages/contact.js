@@ -5,8 +5,19 @@ const Contact = () => {
   return (
     <Fragment>
       <Layout page="contact">
-        <h1>Contact</h1>
+        <div className="container">
+          <h1>Contact Me</h1>
+        </div>
       </Layout>
+      <style jsx>{`
+        .container {
+          height: 80vh;
+          display: flex;
+          flex-directoin: column;
+          justify-content: center;
+          align-items: center;
+        }
+      `}</style>
     </Fragment>
   );
 };
