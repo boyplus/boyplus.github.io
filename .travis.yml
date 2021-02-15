@@ -4,6 +4,8 @@ node_js:
 cache:
   directories:
     - node_modules # Cache the node_modules folder for quicker build times
+install:
+  - yarn
 script:
   - npm run build # Runs next build
   - npm run export # Runs next export and generates the out directory
