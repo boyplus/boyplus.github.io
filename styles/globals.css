@@ -23,3 +23,18 @@ p {
 .blue {
   color: #322f7b;
 }
+
+.space {
+  letter-spacing: 2px;
+}
+
+.icon-text {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 300ms;
+}
+
+.icon:hover .icon-text {
+  opacity: 1;
+  transform: translateY(0);
+}
