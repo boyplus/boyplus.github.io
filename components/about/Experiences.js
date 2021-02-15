@@ -16,16 +16,22 @@ const Experiences = () => {
         "Mentor in Introductio to Programming and Web Application Development for first year student at SIT KMUTT.",
     },
     {
-      title: "Content Creator of DSC KMUTT",
+      title: "Core team of DSC KMUTT",
       year: "2020 - Present",
       description:
-        "Create content about Google services and Sustainable Development Goals at Developer Student Clubs - KMUTT.",
+        "Conten Creator who create content about Google services at Developer Student Clubs - KMUTT.",
     },
     {
       title: "Computer Olympiad Tutor",
       year: "2020",
       description:
         "Teach students at Benjamarachutit Ratchaburi School. Produced 1 silver in 2020 Thailand Olympiad in Informatics.",
+    },
+    {
+      title: "Application Development Leader",
+      year: "2020",
+      description:
+        "Term project in Integrated project I of Computer Science course. Project is online learning plafrom.",
     },
   ];
 
