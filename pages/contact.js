@@ -28,6 +28,12 @@ const Contact = () => {
       margin: -70,
       link: "https://www.linkedin.com/in/thanaphon-sombunkaeo-755a881b0/",
     },
+    {
+      name: "medium",
+      text: "Thanaphon Sombunkaeo",
+      margin: -70,
+      link: "https://medium.com/@_thanaphon",
+    },
   ];
   return (
     <Fragment>
