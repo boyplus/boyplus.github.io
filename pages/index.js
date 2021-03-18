@@ -21,6 +21,7 @@ const Home = () => {
             <Typing
               bio="Computer Science student who interest in algorithms and web development."
               speed={40}
+              disable={true}
             ></Typing>
           </div>
         </div>

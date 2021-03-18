@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
-const Typing = ({ bio, speed }) => {
+const Typing = ({ bio, speed, disable }) => {
   let i = 0;
   const [text, setText] = useState("");
   const typeWriter = () => {
@@ -22,15 +22,23 @@ const Typing = ({ bio, speed }) => {
     }
   };
 
+  const renderTyping = () => {
+    if (disable) {
+      return <p style={{ padding: "5px", display: "flex" }}>{bio}</p>;
+    } else {
+      return (
+        <Fragment>
+          <p style={{ padding: "5px", display: "flex" }}>{text}</p>
+          <div style={getCursorStyle()}></div>
+        </Fragment>
+      );
+    }
+  };
+
   useEffect(() => {
     typeWriter();
   }, []);
-  return (
-    <Fragment>
-      <p style={{ padding: "5px", display: "flex" }}>{text}</p>
-      <div style={getCursorStyle()}></div>
-    </Fragment>
-  );
+  return <Fragment>{renderTyping()}</Fragment>;
 };
 
 export default Typing;

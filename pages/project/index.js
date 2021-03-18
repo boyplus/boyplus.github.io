@@ -65,12 +65,11 @@ const ProjectPage = () => {
         .content {
           padding-top: 30px;
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: auto auto auto;
           gap: 3%;
         }
         .container {
-          padding: 3% 5% 70px 5%;
-          min-height: 80vh;
+          padding: 3% 5% 100px 5%;
         }
         .title {
           font-size: 3rem;
@@ -79,13 +78,19 @@ const ProjectPage = () => {
 
         @media only screen and (max-width: 950px) {
           .content {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: auto auto;
+          }
+          .container {
+            padding-bottom: 150px;
           }
         }
 
         @media only screen and (max-width: 600px) {
           .content {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: auto;
+          }
+          .container {
+            padding-bottom: 200px;
           }
         }
       `}</style>
