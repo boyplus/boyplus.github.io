@@ -13,7 +13,7 @@ const Experiences = () => {
       title: "CS Mentor",
       year: "2020 - Present",
       description:
-        "Mentor in Introductio to Programming and Web Application Development for first year student at SIT KMUTT.",
+        "Mentor in Introduction to Programming and Web Application Development for first year student at SIT KMUTT.",
     },
     {
       title: "Core team of DSC KMUTT",

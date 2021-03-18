@@ -17,19 +17,34 @@ const Project = () => {
             <img src={data.home} width="100%"></img>
           </div>
           <div style={{ paddingLeft: "30px" }}>
-            <h1>{data.title}</h1>
+            <h1 className="blue">{data.title}</h1>
             <p style={{ paddingTop: "10px" }}>{data.description}</p>
-            <h2 style={{ paddingTop: "10px" }}>Technology Stack</h2>
-            {data.stacks.map((el) => {
-              return (
-                <div key={el}>
-                  <p>{el}</p>
-                </div>
-              );
-            })}
+            <h2 style={{ paddingTop: "20px" }} className="blue">
+              Technology Stack
+            </h2>
+            <ul>
+              {data.stacks.map((el) => {
+                return (
+                  <li key={el} style={{ marginTop: "8px" }}>
+                    <span style={{ marginLeft: "10px" }}>
+                      <span style={{ fontWeight: "500" }}>
+                        {el.split(":")[0]}
+                      </span>
+                      :<span>{el.split(":")[1]}</span>
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
         <style jsx>{`
+          ul {
+            list-style-type: none;
+          }
+          ul > li:before {
+            content: "-";
+          }
           .container {
             padding-top: 20px;
             display: grid;
