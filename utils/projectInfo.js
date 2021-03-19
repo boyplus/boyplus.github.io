@@ -14,6 +14,7 @@ const datas = [
       "Host: Google Cloud Platform",
     ],
     home: "/images/project/eduroom/home.png",
+    images: ["1.png", "2.png", "3.png", "4.png", "5.png"],
   },
 
   {
