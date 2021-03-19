@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTimes,
@@ -6,45 +6,89 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Modal = ({ image, setShowModal, currentIndex, size }) => {
+const Modal = ({
+  image,
+  setShowModal,
+  currentIndex,
+  setCurrentIndex,
+  size,
+}) => {
+  function downHandler({ keyCode }) {
+    if (keyCode === 37 && currentIndex !== 0) {
+      setCurrentIndex(currentIndex - 1);
+    } else if (keyCode === 39 && currentIndex !== size - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("keydown", downHandler);
+    return () => {
+      window.removeEventListener("keydown", downHandler);
+    };
+  });
   return (
     <Fragment>
       <div className="container" onClick={() => setShowModal(false)}>
         <div className="content" onClick={(e) => e.stopPropagation()}>
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <div className="icon" onClick={() => setShowModal(false)}>
+            <div className="icon hover" onClick={() => setShowModal(false)}>
               <FontAwesomeIcon icon={faTimes} />
             </div>
           </div>
           <div className="image-container">
-            {currentIndex !== 0 ? (
-              <div className="icon">
-                <FontAwesomeIcon icon={faChevronLeft} />
-              </div>
-            ) : null}
+            <div className="icon">
+              {currentIndex !== 0 ? (
+                <div
+                  className="hover"
+                  onClick={() => setCurrentIndex(currentIndex - 1)}
+                >
+                  <FontAwesomeIcon icon={faChevronLeft} />
+                </div>
+              ) : null}
+            </div>
             <img
-              className="image"
+              className="image selectDisable"
               src={`/images/project/eduroom/${image}`}
               width="700px"
               height="auto"
             ></img>
-            {currentIndex !== size - 1 ? (
-              <div className="icon">
-                <FontAwesomeIcon icon={faChevronRight} />
-              </div>
-            ) : null}
+            <div className="icon">
+              {currentIndex !== size - 1 ? (
+                <div
+                  className="hover"
+                  onClick={() => setCurrentIndex(currentIndex + 1)}
+                >
+                  <FontAwesomeIcon icon={faChevronRight} />
+                </div>
+              ) : null}
+            </div>
           </div>
+          <p className="text">
+            Click on the arrow or press left and right to change picture
+          </p>
         </div>
       </div>
       <style jsx>{`
+        .text {
+          display: flex;
+          justify-content: center;
+          color: white;
+          opacity: 0.5;
+          margin-top: -20px;
+        }
+        .selectDisable {
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -o-user-select: none;
+          user-select: none;
+        }
         .icon {
           width: 20px;
           height: 20px;
           color: whitesmoke;
-          opacity: 1;
-          transition: 0.25s;
         }
-        .icon:hover {
+        .hover:hover {
           opacity: 0.75;
           transition: 0.25s;
           cursor: pointer;

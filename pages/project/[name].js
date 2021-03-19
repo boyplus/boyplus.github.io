@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import BlogLayout from "../../components/BlogLayout";
@@ -11,7 +11,12 @@ const Project = () => {
   const data = projectInfo.find((el) => el.name == name);
 
   const [showModal, setShowModal] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    console.log("current is", currentIndex);
+  }, [currentIndex]);
+
   const renderProject = () => {
     if (!name) return null;
     return (
@@ -19,8 +24,9 @@ const Project = () => {
         <div className="container">
           {showModal ? (
             <Modal
-              image={currentIndex === null ? null : data.images[currentIndex]}
+              image={data.images[currentIndex]}
               setShowModal={setShowModal}
+              setCurrentIndex={setCurrentIndex}
               currentIndex={currentIndex}
               size={data.images.length}
             ></Modal>
