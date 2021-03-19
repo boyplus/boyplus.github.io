@@ -9,16 +9,11 @@ const Project = () => {
   const router = useRouter();
   const name = router.query.name;
   const data = projectInfo.find((el) => el.name == name);
-
   const [showModal, setShowModal] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    console.log("current is", currentIndex);
-  }, [currentIndex]);
-
   const renderProject = () => {
-    if (!name) return null;
+    if (!name || !data) return null;
     return (
       <Fragment>
         <div className="container">
