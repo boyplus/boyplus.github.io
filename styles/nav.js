@@ -9,7 +9,7 @@ export default css`
     font-weight: 300;
     opacity: 0.7;
     transition: 0.25s;
-    width: 130px;
+    width: 120px;
     display: flex;
     justify-content: center;
   }

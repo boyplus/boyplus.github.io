@@ -1,5 +1,6 @@
 import { Fragment, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faTimes,
   faChevronLeft,
@@ -56,6 +57,7 @@ const Modal = ({
               src={`/images/project/${name}/${image}`}
               width="70%"
               height="auto"
+              alt={name}
               onClick={(e) => e.stopPropagation()}
             ></img>
 

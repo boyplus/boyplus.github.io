@@ -31,9 +31,19 @@ const Project = () => {
             <div>
               <img src={data.home} width="100%"></img>
             </div>
-            <div style={{ paddingLeft: "30px" }}>
+            <div className="content-text">
               <h1 className="blue">{data.title}</h1>
               <p style={{ paddingTop: "10px" }}>{data.description}</p>
+              {data.link ? (
+                <p style={{ marginTop: "10px" }}>
+                  Link:{" "}
+                  <a href={data.link} target="_blank" className="blue">
+                    {data.link}
+                  </a>
+                </p>
+              ) : (
+                ""
+              )}
               <h2 style={{ paddingTop: "20px" }} className="blue">
                 Technology Stack
               </h2>
@@ -58,11 +68,10 @@ const Project = () => {
             <div className="images">
               {data.images?.map((el, index) => {
                 return (
-                  <div className="image-container">
+                  <div className="image-container" key={el}>
                     <img
                       src={`/images/project/${name}/${el}`}
                       className="img-content"
-                      key={el}
                       onClick={() => {
                         setCurrentIndex(index);
                         setShowModal(true);
@@ -95,7 +104,6 @@ const Project = () => {
           }
           .images {
             margin-top: 30px;
-            grid-template-columns: repeat(3, 1fr);
             display: flex;
             flex-wrap: wrap;
           }
@@ -108,6 +116,27 @@ const Project = () => {
           }
           .img-content:hover {
             cursor: pointer;
+          }
+          .content-text {
+            padding-left: 30px;
+          }
+
+          @media only screen and (max-width: 900px) {
+            .top {
+              grid-template-columns: repeat(1, 1fr);
+            }
+            .content-text {
+              padding-top: 20px;
+              padding-left: 0;
+            }
+            .image-container {
+              width: 50%;
+            }
+          }
+          @media only screen and (max-width: 500px) {
+            .image-container {
+              width: 100%;
+            }
           }
         `}</style>
       </Fragment>
