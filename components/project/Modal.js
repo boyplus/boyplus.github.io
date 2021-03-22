@@ -12,8 +12,12 @@ const Modal = ({
   currentIndex,
   setCurrentIndex,
   size,
+  name,
 }) => {
   function downHandler({ keyCode }) {
+    if (keyCode === 27) {
+      setShowModal(false);
+    }
     if (keyCode === 37 && currentIndex !== 0) {
       setCurrentIndex(currentIndex - 1);
     } else if (keyCode === 39 && currentIndex !== size - 1) {
@@ -29,14 +33,14 @@ const Modal = ({
   return (
     <Fragment>
       <div className="container" onClick={() => setShowModal(false)}>
-        <div className="content" onClick={(e) => e.stopPropagation()}>
+        <div className="content">
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <div className="icon hover" onClick={() => setShowModal(false)}>
               <FontAwesomeIcon icon={faTimes} />
             </div>
           </div>
           <div className="image-container">
-            <div className="icon">
+            <div className="icon" onClick={(e) => e.stopPropagation()}>
               {currentIndex !== 0 ? (
                 <div
                   className="hover"
@@ -46,13 +50,16 @@ const Modal = ({
                 </div>
               ) : null}
             </div>
+
             <img
               className="image selectDisable"
-              src={`/images/project/eduroom/${image}`}
-              width="700px"
+              src={`/images/project/${name}/${image}`}
+              width="70%"
               height="auto"
+              onClick={(e) => e.stopPropagation()}
             ></img>
-            <div className="icon">
+
+            <div className="icon" onClick={(e) => e.stopPropagation()}>
               {currentIndex !== size - 1 ? (
                 <div
                   className="hover"
@@ -75,6 +82,7 @@ const Modal = ({
           color: white;
           opacity: 0.5;
           margin-top: -20px;
+          text-align: center;
         }
         .selectDisable {
           -webkit-user-select: none;
@@ -97,6 +105,7 @@ const Modal = ({
           margin-top: 20px;
           display: flex;
           align-items: center;
+          justify-content: center;
         }
         .container {
           height: 100vh;

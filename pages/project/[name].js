@@ -19,6 +19,7 @@ const Project = () => {
         <div className="container">
           {showModal ? (
             <Modal
+              name={name}
               image={data.images[currentIndex]}
               setShowModal={setShowModal}
               setCurrentIndex={setCurrentIndex}
@@ -57,15 +58,17 @@ const Project = () => {
             <div className="images">
               {data.images?.map((el, index) => {
                 return (
-                  <img
-                    src={`/images/project/eduroom/${el}`}
-                    className="img-content"
-                    key={el}
-                    onClick={() => {
-                      setCurrentIndex(index);
-                      setShowModal(true);
-                    }}
-                  ></img>
+                  <div className="image-container">
+                    <img
+                      src={`/images/project/${name}/${el}`}
+                      className="img-content"
+                      key={el}
+                      onClick={() => {
+                        setCurrentIndex(index);
+                        setShowModal(true);
+                      }}
+                    ></img>
+                  </div>
                 );
               })}
             </div>
@@ -93,9 +96,17 @@ const Project = () => {
           .images {
             margin-top: 30px;
             grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .image-container {
+            width: 33%;
+            padding: 20px;
           }
           .img-content {
-            width: 33%;
+            width: 100%;
+          }
+          .img-content:hover {
             cursor: pointer;
           }
         `}</style>
