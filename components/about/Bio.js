@@ -25,7 +25,7 @@ const Bio = () => {
           </div>
           <p className="text">
             Hi everyone, I am a sophomore student in Computer Science at School
-            of Information Teachnology, King Mongkut's University of Technology
+            of Information Techonology, King Mongkut's University of Technology
             Thonburi (KMUTT).
           </p>
           <p className="text">
