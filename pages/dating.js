@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react'
 import moment from 'moment';
 import Confetti from 'react-confetti'
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 import Head from "next/head";
 const Dating = () => {
   const [windowWidth, setWindowWidth] = useState(null);
@@ -22,16 +22,21 @@ const Dating = () => {
   }, [])
 
   useEffect(() => {
-    setInterval(() => {
-      var a = moment();
-      var b = moment([2021, 3, 21]);
-      const month = a.diff(b, 'months')
-      const day = a.diff(b, 'days') % 30
-      const hour = a.diff(b, 'hours') % 24
-      const minute = a.diff(b, 'minutes') % 60
-      const second = a.diff(b, 'seconds') % 60
-      setDiff([month, day, hour, minute, second])
-    }, 500)
+    try {
+      setInterval(() => {
+        var a = moment();
+        var b = moment([2021, 3, 21]);
+        const month = a.diff(b, 'months')
+        const day = a.diff(b, 'days') % 30
+        const hour = a.diff(b, 'hours') % 24
+        const minute = a.diff(b, 'minutes') % 60
+        const second = a.diff(b, 'seconds') % 60
+        setDiff([month, day, hour, minute, second])
+      }, 500)
+    } catch (err) {
+
+    }
+
   }, [])
 
   const renderPage = () => {
