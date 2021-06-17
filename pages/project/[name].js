@@ -29,7 +29,7 @@ const Project = () => {
           ) : null}
           <div className="top">
             <div>
-              <img src={data.home} width="100%"></img>
+              <img src={data.home} width="100%" alt="home picture"></img>
             </div>
             <div className="content-text">
               <h1 className="blue">{data.title}</h1>
@@ -70,6 +70,7 @@ const Project = () => {
                 return (
                   <div className="image-container" key={el}>
                     <img
+                      alt={el}
                       src={`/images/project/${name}/${el}`}
                       className="img-content"
                       onClick={() => {
