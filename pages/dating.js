@@ -27,7 +27,8 @@ const Dating = () => {
         var a = moment();
         var b = moment([2021, 3, 21]);
         const month = a.diff(b, 'months')
-        const day = a.diff(b, 'days') % 30
+        let day = a.diff(b, 'days') % 30
+        if (day === 0 && a.diff(b, 'days') !== 0) day = 30
         const hour = a.diff(b, 'hours') % 24
         const minute = a.diff(b, 'minutes') % 60
         const second = a.diff(b, 'seconds') % 60
