@@ -23,11 +23,6 @@ const Cute = () => {
 
   }, [])
   return <Fragment>
-    <Head>
-      <title>ทำไมฟ้าน่ารักจัง</title>
-      <link rel="icon" href="/favicon.ico" />
-      <meta name="title" content="Why fah is so cute"></meta>
-    </Head>
     <div className="container">
       {data.map((el, index) => {
         return <p key={index} style={{
