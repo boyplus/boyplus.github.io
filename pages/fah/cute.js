@@ -24,7 +24,7 @@ const Cute = () => {
   }, [])
   return <Fragment>
     <Head>
-      <title>Thanaphon</title>
+      <title>ทำไมฟ้าน่ารักจัง</title>
       <link rel="icon" href="/favicon.ico" />
       <meta name="title" content="ทำไมฟ้าน่ารักจัง"></meta>
     </Head>
