@@ -15,7 +15,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "moment": "^2.29.1",
-    "next": "^6.0.3",
+    "next": "^10.0.0",
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
     "react-confetti": "^6.0.1",
